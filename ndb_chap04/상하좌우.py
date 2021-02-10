@@ -1,8 +1,8 @@
-import re
 from typing import List
 class Solution:
 
-    def solution(self, n, arr: List[str]):
+    # 자가풀이여부: O
+    def my_answer(self, n, arr: List[str]):
 
         i,j=1,1
         for d in arr:
@@ -19,7 +19,28 @@ class Solution:
                 if i<=n-1:
                     i+=1
 
-        return [i,j]
+        print([i,j])
+
+    def solution(self, n, arr: List[str]):
+
+        x,y=1,1
+        dx = [0,0,-1,1]
+        dy = [-1,1,0,0]
+        move_types = ['L','R','U','D']
+
+        for plan in arr:
+            for i in range(len(move_types)):
+                if plan == move_types[i]:
+                    nx = x + dx[i]
+                    ny = y + dy[i]
+            if nx<1 or ny<1 or nx>n or ny>n:
+                continue
+            x,y = nx,ny
+
+        print(x,y)
+
 p = Solution()
-print(p.solution(5, ['R','R','R','U','D','D']))
-print(p.solution(5, ['D','D','L','R','R','R', 'U', 'L', 'D','D','D']))
+p.my_answer(5, ['R','R','R','U','D','D'])
+p.solution(5, ['R','R','R','U','D','D'])
+p.my_answer(5, ['D','D','L','R','R','R', 'U', 'L', 'D','D','D'])
+p.solution(5, ['D','D','L','R','R','R', 'U', 'L', 'D','D','D'])

@@ -1,7 +1,9 @@
 import re
 from typing import List
+
 class Solution:
 
+    # 자가풀이여부: X
     def solution(self, n):
 
         count = 0
@@ -11,7 +13,7 @@ class Solution:
                     if '3' in str(i)+str(j)+str(k):
                         count += 1
 
-        return count
+        print(count)
 
 p = Solution()
-print(p.solution(5))
+p.solution(5)
