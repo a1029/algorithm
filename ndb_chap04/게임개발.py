@@ -1,6 +1,7 @@
 
 class Solution:
 
+    # 자가풀이여부: X
     direction = 0
     def solution(self,n,m,pos,arr):
 
@@ -40,7 +41,7 @@ class Solution:
                     break
                 turn_time=0
 
-        return count
+        print(count)
 
 p = Solution()
-print(p.solution(4,4,[1,1,0],[[1,1,1,1],[1,0,0,1],[1,1,0,1],[1,1,1,1]]))
+p.solution(4,4,[1,1,0],[[1,1,1,1],[1,0,0,1],[1,1,0,1],[1,1,1,1]])

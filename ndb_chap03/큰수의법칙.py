@@ -3,7 +3,8 @@ import collections
 
 class Solution:
 
-    def solution(self, n, m, k, array: List[int]):
+    # 자가풀이여부: O
+    def my_answer(self, n, m, k, array: List[int]):
 
         array.sort()
         first = array[-1]
@@ -19,9 +20,11 @@ class Solution:
                 break
             result += second
             m-=1
-        return result
 
-    def solution2(self, n, m, k, array: List[int]):
+        print(result)
+
+
+    def solution(self, n, m, k, array: List[int]):
 
         array.sort()
         first = array[-1]
@@ -32,9 +35,12 @@ class Solution:
 
         result += count * first
         result += (m-count) * second
-        print(count)
-        return result
+
+        print(result)
+
 
 p = Solution()
-print(p.solution2(5,8,3,[2,4,5,4,6]))
-print(p.solution2(5,7,2,[3,4,3,4,3]))
+p.my_answer(5,8,3,[2,4,5,4,6])
+p.solution(5,8,3,[2,4,5,4,6])
+p.my_answer(5,7,2,[3,4,3,4,3])
+p.solution(5,7,2,[3,4,3,4,3])
