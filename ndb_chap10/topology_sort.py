@@ -11,6 +11,7 @@ def topology_sort(v, e, array: List[List[int]]):
         graph[a].append(b)
         indegree[b] += 1
 
+    print(graph)
     result = []
     q = collections.deque()
 
