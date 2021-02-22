@@ -1,7 +1,7 @@
 from typing import List
 
 
-# 자가풀이여부: O
+# self-solving : O
 def my_answer(s):
     c0, c1 = 0, 0
     boolean = True
