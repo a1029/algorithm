@@ -1,7 +1,8 @@
 # algorithm
 
-I upload my code and solution code while studying algorithm.
+알고리즘을 공부하면서 제가 작성한 코드와 해답 코드를 올립니다.
+해답코드는 책에서 참고했습니다.
+해답 코드 저작권에 문제가 있으면 aab1023@naver.com로 이메일 보내주세요. 
 
-All solution code I uploaded were referenced in the book I bought. 
-
-If you have a problem or requirement with copyright of the solution code I uploaded, please email me aab1023@naver.com.
+파이썬 알고리즘 인터뷰, 박상길
+이것이 취업을 위한 코딩 테스트다, 나동빈
