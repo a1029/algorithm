@@ -1,4 +1,5 @@
-# self-solving : X
+
+# fail
 def my_answer(s):
     sub_array = []
     temp = []

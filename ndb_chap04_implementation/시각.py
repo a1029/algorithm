@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
 
-    # 자가풀이여부: X
+    # fail
     def solution(self, n):
 
         count = 0

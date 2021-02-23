@@ -1,7 +1,7 @@
 
 class Solution:
 
-    # 자가풀이여부: X
+    # fail
     direction = 0
     def solution(self,n,m,pos,arr):
 

@@ -3,7 +3,7 @@ import collections
 
 class Solution:
 
-    # 자가풀이여부: X
+    # fail
     def solution(self, n, m, input: List[str]):
 
         graph = [list(line) for line in input]

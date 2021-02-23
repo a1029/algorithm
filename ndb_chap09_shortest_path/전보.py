@@ -5,7 +5,7 @@ import heapq
 
 class Solution:
 
-    # 자가풀이여부: O
+    # success
     def my_answer(self, n, m, c, times: List[List[int]]):
 
         graph = collections.defaultdict(list)

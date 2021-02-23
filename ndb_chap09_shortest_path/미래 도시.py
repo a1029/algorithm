@@ -5,7 +5,7 @@ import collections
 
 class Solution:
 
-    #자가풀이여부: O
+    # success
     def my_answer(self, n, m, times: List[List[int]], x, k):
 
         inf = int(1e9)
