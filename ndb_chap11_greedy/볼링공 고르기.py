@@ -3,7 +3,7 @@ import itertools
 import collections
 
 
-# 자가풀이여부: X
+# fail
 def my_answer(data: List[int]):
     counter = collections.Counter(data)
     counter = sorted(counter.items())

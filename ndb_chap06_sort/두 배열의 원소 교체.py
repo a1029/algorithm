@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
 
-    # 자가풀이여부: O
+    # success
     def my_answer(self, arr1: List[int], arr2: List[int], k):
 
         arr1.sort()

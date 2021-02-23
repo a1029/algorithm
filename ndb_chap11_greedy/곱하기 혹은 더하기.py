@@ -1,5 +1,5 @@
 
-# 자가풀이여부: O
+# success
 def my_answer(s):
 
     arr = [int(x) for x in s]

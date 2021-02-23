@@ -4,7 +4,7 @@ from collections import Counter
 
 class Solution:
 
-    # 자가풀이여부: O
+    # success
     def my_answer(self, n, arr1: List[int], m, arr2: List[int]):
 
         def bst(arr: List[int], target, start, end):

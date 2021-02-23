@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
 
-    # 자가풀이여부: X
+    # fail
     def solution(self, arr: List[int], m):
 
         dp = [10000] * (m + 1)

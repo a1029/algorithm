@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
 
-    # 자가풀이여부: O
+    # success
     def my_answer(self, m, arr: List[int]):
 
         arr2 = [0] * len(arr)

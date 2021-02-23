@@ -2,7 +2,7 @@ from typing import List
 import collections
 import copy
 
-# 자가풀이여부: X
+# fail
 def my_answer(n, array: List[List[int]]):
     indegree = [0] * (n+1)
     graph = [[] for _ in range(n + 1)]

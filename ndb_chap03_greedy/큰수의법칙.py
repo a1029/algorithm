@@ -3,7 +3,7 @@ import collections
 
 class Solution:
 
-    # 자가풀이여부: O
+    # success
     def my_answer(self, n, m, k, array: List[int]):
 
         array.sort()

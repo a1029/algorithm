@@ -1,6 +1,6 @@
 class Solution:
 
-    # 자가풀이여부: X
+    # fail
     def solution(self, x):
 
         d = [0] * (x + 1)

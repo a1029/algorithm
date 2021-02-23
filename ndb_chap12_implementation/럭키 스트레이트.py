@@ -1,5 +1,5 @@
 
-# self-solving : O
+# success
 def my_answer(num):
 
     num = [int(n) for n in str(num)]

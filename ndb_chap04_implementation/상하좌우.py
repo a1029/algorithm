@@ -1,7 +1,7 @@
 from typing import List
 class Solution:
 
-    # 자가풀이여부: O
+    # success
     def my_answer(self, n, arr: List[str]):
 
         i,j=1,1

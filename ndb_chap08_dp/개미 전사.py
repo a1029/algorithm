@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
 
-    # 자가풀이여부: X
+    # fail
     def solution(self, arr: List[int]):
         d = [0] * len(arr)
         d[0] = arr[0]

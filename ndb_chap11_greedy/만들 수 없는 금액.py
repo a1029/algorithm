@@ -1,7 +1,7 @@
 from typing import List
 
 
-# self-solving : X
+# fail
 def solution(n, arr: List[int]):
     arr.sort()
     target = 1

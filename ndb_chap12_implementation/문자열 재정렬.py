@@ -1,5 +1,5 @@
 
-# self-solving : O
+# success
 def my_answer(data: str):
 
     str_array = []

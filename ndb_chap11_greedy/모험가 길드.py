@@ -1,6 +1,6 @@
 from typing import List
 
-# 자가풀이여부: X
+# fail
 def my_answer(n, arr: List[int]):
 
     arr.sort()

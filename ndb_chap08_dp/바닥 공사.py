@@ -2,7 +2,7 @@
 
 class Solution:
 
-    # 자가풀이여부: X
+    # fail
     def my_answer(self, n):
 
         dp = [0]*(n+1)

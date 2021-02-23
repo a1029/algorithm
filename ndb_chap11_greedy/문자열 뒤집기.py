@@ -1,7 +1,7 @@
 from typing import List
 
 
-# self-solving : O
+# success
 def my_answer(s):
     c0, c1 = 0, 0
     boolean = True
