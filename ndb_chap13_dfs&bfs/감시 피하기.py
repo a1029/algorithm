@@ -105,13 +105,13 @@ def solution(n, data):
     return
 
 
-my_answer(5,
+my_answer(5,    # NO
           [['X', 'S', 'X', 'X', 'T'],
            ['T', 'X', 'S', 'X', 'X'],
            ['X', 'X', 'X', 'X', 'X'],
            ['X', 'T', 'X', 'X', 'X'],
            ['X', 'X', 'T', 'X', 'X']])
-my_answer(4,
+my_answer(4,    # YES
           [['S', 'S', 'S', 'T'],
            ['X', 'X', 'X', 'X'],
            ['X', 'X', 'X', 'X'],
