@@ -28,12 +28,12 @@ def solution(n, k, data, s, target_x, target_y):
     print(data[target_x-1][target_y-1])
 
 
-solution(3, 3,
+solution(3, 3,  # 3
           [[1, 0, 2],
            [0, 0, 0],
            [3, 0, 0]],
           2, 3, 2)
-solution(3, 3,
+solution(3, 3, # 0
           [[1, 0, 2],
            [0, 0, 0],
            [3, 0, 0]],
