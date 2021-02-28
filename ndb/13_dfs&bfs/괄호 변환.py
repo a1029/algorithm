@@ -44,6 +44,6 @@ def solution(w):
     return answer
 
 
-print(solution("(()())()"))
-print(solution(")("))
-print(solution("()))((()"))
+print(solution("(()())()")) # (()())()
+print(solution(")("))       # ()
+print(solution("()))((()")) # ()(())()
