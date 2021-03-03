@@ -1,5 +1,5 @@
 
-# fail
+# X
 def rotate(direction, c):
     if c == 'D':
         direction = (direction + 1) % 4

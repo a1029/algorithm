@@ -1,5 +1,5 @@
 
-# success
+# O
 def my_answer(s):
 
     arr = [int(x) for x in s]

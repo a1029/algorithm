@@ -1,6 +1,6 @@
 
 
-# fail
+# X O
 def solution(n, data):
 
     data.reverse()

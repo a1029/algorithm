@@ -1,5 +1,5 @@
 
-# success
+# O
 def my_answer(n, data):
 
     data = sorted(data, key=lambda x: (-x[1],x[2],-x[3],x[0]))

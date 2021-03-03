@@ -1,6 +1,6 @@
 import heapq
 
-# success
+# O
 def my_answer(n, m, data):
     graph = [[] for _ in range(n + 1)]
     for i, j in data:

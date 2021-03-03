@@ -1,5 +1,5 @@
 
-# success
+# O
 def my_answer(data: str):
 
     str_array = []

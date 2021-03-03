@@ -1,7 +1,7 @@
 import itertools
 import heapq
 
-# fail
+# X
 def my_answer(n, data):
     perms = list(itertools.permutations(data))
     result = 1e9

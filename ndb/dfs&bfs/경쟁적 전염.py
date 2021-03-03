@@ -1,6 +1,6 @@
 
 
-# fail
+# X
 def solution(n, k, data, s, target_x, target_y):
     
     q = []

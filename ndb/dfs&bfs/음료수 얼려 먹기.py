@@ -1,78 +1,74 @@
 from typing import List
 
 
-class Solution:
+# O
+def my_answer(input: List[str]):
 
-    # success
-    def my_answer(self, input: List[str]):
+    def dfs(i, j):
 
-        def dfs(i, j):
+        if i < 0 or i >= len(arr) or j < 0 or j >= len(arr[i]) or arr[i][j] == '1':
+            return
 
-            if i < 0 or i >= len(arr) or j < 0 or j >= len(arr[i]) or arr[i][j] == '1':
-                return
+        arr[i][j] = '1'
 
+        dfs(i + 1, j)
+        dfs(i, j + 1)
+        dfs(i - 1, j)
+        dfs(i, j - 1)
+
+    result = 0
+    arr = []
+    for line in input:
+        arr.append(list(line))
+
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            if arr[i][j] != '1':
+                dfs(i, j)
+                result += 1
+
+    print(result)
+
+
+
+def solution(input: List[str]):
+
+    def dfs(i, j):
+
+        if i <= -1 or i >= len(arr) or j <= -1 or j >= len(arr[i]):
+            return False
+        if arr[i][j] == '0':
             arr[i][j] = '1'
 
             dfs(i + 1, j)
             dfs(i, j + 1)
             dfs(i - 1, j)
             dfs(i, j - 1)
+            return True
+        return False
 
-        result = 0
-        arr = []
-        for line in input:
-            arr.append(list(line))
+    result = 0
+    arr = []
+    for line in input:
+        arr.append(list(line))
 
-        for i in range(len(arr)):
-            for j in range(len(arr[i])):
-                if arr[i][j] != '1':
-                    dfs(i, j)
-                    result += 1
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            if dfs(i, j) == True:
+                result += 1
 
-        print(result)
-
-
-
-    def solution(self, input: List[str]):
-
-        def dfs(i, j):
-
-            if i <= -1 or i >= len(arr) or j <= -1 or j >= len(arr[i]):
-                return False
-            if arr[i][j] == '0':
-                arr[i][j] = '1'
-
-                dfs(i + 1, j)
-                dfs(i, j + 1)
-                dfs(i - 1, j)
-                dfs(i, j - 1)
-                return True
-            return False
-
-        result = 0
-        arr = []
-        for line in input:
-            arr.append(list(line))
-
-        for i in range(len(arr)):
-            for j in range(len(arr[i])):
-                if dfs(i, j) == True:
-                    result += 1
-
-        print(result)
+    print(result)
 
 
-p = Solution()
-
-p.my_answer(['00110',
+my_answer(['00110',
              '00011',
              '11111',
              '00000'])
-p.solution(['00110',
+solution(['00110',
             '00011',
             '11111',
             '00000'])
-p.my_answer(['00000111100000',
+my_answer(['00000111100000',
              '11111101111110',
              '11011101101110',
              '11011101100000',
@@ -87,7 +83,7 @@ p.my_answer(['00000111100000',
              '11111111110011',
              '11100011111111',
              '11100011111111'])
-p.solution(['00000111100000',
+solution(['00000111100000',
             '11111101111110',
             '11011101101110',
             '11011101100000',

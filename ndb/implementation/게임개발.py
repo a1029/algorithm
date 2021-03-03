@@ -1,7 +1,7 @@
 
 class Solution:
 
-    # fail
+    # X
     direction = 0
     def solution(self,n,m,pos,arr):
 

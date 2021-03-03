@@ -1,19 +1,15 @@
-import re
-from typing import List
 
-class Solution:
 
-    # fail
-    def solution(self, n):
+# X
+def solution(n):
 
-        count = 0
-        for i in range(n+1):
-            for j in range(60):
-                for k in range(60):
-                    if '3' in str(i)+str(j)+str(k):
-                        count += 1
+    count = 0
+    for i in range(n+1):
+        for j in range(60):
+            for k in range(60):
+                if '3' in str(i)+str(j)+str(k):
+                    count += 1
 
-        print(count)
+    print(count)
 
-p = Solution()
-p.solution(5)
+solution(5)

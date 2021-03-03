@@ -1,7 +1,7 @@
 import itertools
 import copy
 
-# success
+# O
 def my_answer(n, data):
 
     walls = []

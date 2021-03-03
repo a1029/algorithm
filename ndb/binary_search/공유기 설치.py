@@ -1,6 +1,6 @@
 
 
-# fail
+# X
 def solution(n, c, data):
     data.sort()
 

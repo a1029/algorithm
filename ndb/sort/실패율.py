@@ -1,6 +1,6 @@
 import collections
 
-# fail
+# X
 def my_answer(n, stages):
     counter = [0] * (n + 2)
     for stage in stages:

@@ -1,6 +1,6 @@
 import itertools
 
-# success
+# O
 # 한 집의 치킨거리 구하기
 def cal_distance(i, j, chicks):
     result = 10000

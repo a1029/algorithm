@@ -1,6 +1,6 @@
 
 
-# fail
+# X O
 def solution(a,b):
 
     n = len(a)

@@ -1,5 +1,5 @@
 
-# success
+# O
 def bst(data, start, end):
     if start > end:
         return -1

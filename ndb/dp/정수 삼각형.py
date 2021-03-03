@@ -1,6 +1,6 @@
 import copy
 
-# success
+# O
 def my_answer(n, data):
     dp = copy.deepcopy(data)
 

@@ -1,6 +1,6 @@
 
 
-# fail
+# X X
 def check(i):
 
     while i!=1:
