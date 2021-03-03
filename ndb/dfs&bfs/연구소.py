@@ -2,7 +2,7 @@ import itertools
 import copy
 
 
-# success
+# O
 def search(n, m, data):
     def dfs(i, j):
 

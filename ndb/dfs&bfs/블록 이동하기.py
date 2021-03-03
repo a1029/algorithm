@@ -1,6 +1,6 @@
 import collections
 
-# fail
+# X
 def get_next_pos(pos, board):
     next_pos = []
     pos = list(pos)

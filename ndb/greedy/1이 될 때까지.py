@@ -1,42 +1,39 @@
 
-class Solution:
+# O
+def my_answer(n, k):
 
-    # success
-    def my_answer(self, n, k):
+    count = 0
+    while n!=1:
+        if n%k==0:
+            n/=k
+            count+=1
+        else:
+            n-=1
+            count+=1
 
-        count = 0
-        while n!=1:
-            if n%k==0:
-                n/=k
-                count+=1
-            else:
-                n-=1
-                count+=1
-
-        print(count)
+    print(count)
 
 
-    def solution(self, n, k):
+def solution(n, k):
 
-        count = 0
+    count = 0
 
-        while True:
-            target = (n//k)*k
-            count += (n-target)
-            n = target
+    while True:
+        target = (n//k)*k
+        count += (n-target)
+        n = target
 
-            if n<k:
-                break
-            count += 1
-            n //= k
-        count += (n-1)
-        print(count)
+        if n<k:
+            break
+        count += 1
+        n //= k
+    count += (n-1)
+    print(count)
 
 
-p = Solution()
-p.my_answer(25,5)
-p.solution(25,5)
-p.my_answer(17,4)
-p.solution(17,4)
-p.my_answer(25,3)
-p.solution(25,3)
+my_answer(25,5)
+solution(25,5)
+my_answer(17,4)
+solution(17,4)
+my_answer(25,3)
+solution(25,3)

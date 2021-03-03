@@ -1,7 +1,7 @@
 import bisect
 
 
-# fail
+# X
 def my_answer(n, x, data):
     a = bisect.bisect_left(data, x)
     b = bisect.bisect_right(data, x)

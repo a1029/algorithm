@@ -1,5 +1,5 @@
 
-# success
+# O
 def my_answer(n, m, data):
 
     graph = [[1e9]*(n+1) for _ in range(n+1)]

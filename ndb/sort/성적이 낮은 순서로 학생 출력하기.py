@@ -1,21 +1,18 @@
 from typing import List
 
 
-class Solution:
+# O
+def my_answer():
+    n = int(input())
+    arr = []
+    for i in range(n):
+        input_data = input().split()
+        arr.append((input_data[0], int(input_data[1])))
 
-    # success
-    def my_answer(self):
-        n = int(input())
-        arr = []
-        for i in range(n):
-            input_data = input().split()
-            arr.append((input_data[0], int(input_data[1])))
+    arr.sort()
 
-        arr.sort()
-
-        for name, score in arr:
-            print(score, end=' ')
+    for name, score in arr:
+        print(score, end=' ')
 
 
-p = Solution()
-p.my_answer()
+my_answer()

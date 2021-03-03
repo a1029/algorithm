@@ -1,18 +1,15 @@
 from typing import List
 
 
-class Solution:
+# O
+def my_answer(arr: List[int]):
+    '''n = int(input())
+    array = []
+    for i in range(n):
+        array.append(int(input()))
+    '''
 
-    # success
-    def my_answer(self, arr: List[int]):
-        '''n = int(input())
-        array = []
-        for i in range(n):
-            array.append(int(input()))
-        '''
-
-        print(sorted(arr, reverse=True))
+    print(sorted(arr, reverse=True))
 
 
-p = Solution()
-p.my_answer([15, 27, 12])
+my_answer([15, 27, 12])

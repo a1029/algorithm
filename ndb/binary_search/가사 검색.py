@@ -1,7 +1,7 @@
 import bisect
 
 
-# fail
+# X
 def count_by_range(a, left_value, right_value):
     left = bisect.bisect_left(a, left_value)
     right = bisect.bisect_right(a, right_value)

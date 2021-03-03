@@ -1,7 +1,6 @@
-class Solution:
 
-    # fail
-    def solution(self, x):
+# X
+def solution(x):
 
         d = [0] * (x + 1)
 
@@ -16,6 +15,4 @@ class Solution:
 
         print(d[x])
 
-
-p = Solution()
-p.solution(26)
+solution(26)

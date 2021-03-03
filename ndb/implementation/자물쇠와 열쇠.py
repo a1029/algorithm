@@ -1,7 +1,7 @@
 from typing import List
 
 
-# fail
+# X
 # 2차원 리스트 90도 시계방향 회전
 def rotate(key: List[List[int]]):
     col = len(key)

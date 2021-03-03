@@ -1,6 +1,6 @@
 from typing import List
 
-# fail
+# X
 def my_answer(n, arr: List[int]):
 
     arr.sort()

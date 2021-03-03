@@ -1,7 +1,7 @@
 import itertools
 
 
-# fail
+# X
 def solution(n, weak, dist):
     length = len(weak)
     for i in range(length):

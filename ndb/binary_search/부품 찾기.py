@@ -1,49 +1,45 @@
 from typing import List
 from collections import Counter
 
+# O
+def my_answer(n, arr1: List[int], m, arr2: List[int]):
 
-class Solution:
+    def bst(arr: List[int], target, start, end):
 
-    # success
-    def my_answer(self, n, arr1: List[int], m, arr2: List[int]):
+        if start > end:
+            return 'No'
+        mid = (start + end) // 2
 
-        def bst(arr: List[int], target, start, end):
+        if arr[mid] < target:
+            return bst(arr, target, mid + 1, end)
+        elif arr[mid] > target:
+            return bst(arr, target, start, mid - 1)
+        else:
+            return 'Yes'
 
-            if start > end:
-                return 'No'
-            mid = (start + end) // 2
+    arr1.sort()
+    arr2.sort()
+    result = []
 
-            if arr[mid] < target:
-                return bst(arr, target, mid + 1, end)
-            elif arr[mid] > target:
-                return bst(arr, target, start, mid - 1)
-            else:
-                return 'Yes'
+    for i in range(m):
+        result.append(bst(arr1, arr2[i], 0, len(arr1)))
 
-        arr1.sort()
-        arr2.sort()
-        result = []
+    print(' '.join(result))
 
-        for i in range(m):
-            result.append(bst(arr1, arr2[i], 0, len(arr1)))
+def my_answer2(n, arr1: List[int], m, arr2: List[int]):
 
-        print(' '.join(result))
+    arr1.sort()
+    arr2.sort()
+    result = []
+    c1 = Counter(arr1)
+    for n in arr2:
+        if n in c1:
+            result.append('yes')
+        else:
+            result.append('no')
 
-    def my_answer2(self, n, arr1: List[int], m, arr2: List[int]):
-
-        arr1.sort()
-        arr2.sort()
-        result = []
-        c1 = Counter(arr1)
-        for n in arr2:
-            if n in c1:
-                result.append('yes')
-            else:
-                result.append('no')
-
-        print(' '.join(result))
+    print(' '.join(result))
 
 
-p = Solution()
-p.my_answer(5, [8, 3, 7, 9, 2], 3, [5, 7, 9])
-p.my_answer2(5, [8, 3, 7, 9, 2], 3, [5, 7, 9])
+my_answer(5, [8, 3, 7, 9, 2], 3, [5, 7, 9])
+my_answer2(5, [8, 3, 7, 9, 2], 3, [5, 7, 9])

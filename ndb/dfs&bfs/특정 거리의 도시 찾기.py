@@ -2,7 +2,7 @@ import heapq
 import collections
 
 
-# fail
+# X
 def my_answer(n, m, k, x, data):
     graph = collections.defaultdict(list)
     for u, v in data:

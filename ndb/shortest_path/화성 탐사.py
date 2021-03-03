@@ -1,7 +1,7 @@
 import heapq
 
 
-# success
+# O
 def my_answer(n, data):
     inf = int(1e9)
     dist = [[inf] * n for _ in range(n)]

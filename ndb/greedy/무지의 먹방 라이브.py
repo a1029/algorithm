@@ -2,7 +2,7 @@ from typing import List
 import heapq
 
 
-# fail
+# X
 def solution(food_times: List[int], k):
     if sum(food_times) <= k:
         return -1

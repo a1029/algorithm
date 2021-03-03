@@ -1,4 +1,4 @@
-# fail
+# X
 def my_answer(n, data):
     data.sort()
     result = 1e9

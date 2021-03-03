@@ -1,5 +1,5 @@
 
-# success
+# O
 def my_answer(num):
 
     num = [int(n) for n in str(num)]

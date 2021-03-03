@@ -1,7 +1,7 @@
 import collections
 
 
-# fail
+# X
 def solution(n, l, r, data):
     result = 0
     dx = [0, 1, 0, -1]
