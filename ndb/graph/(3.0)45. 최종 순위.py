@@ -1,7 +1,7 @@
 from collections import deque
 
 
-# X
+# X O
 def my_answer(n, data, m, data2):
     indegree = [0] * (n + 1)
     graph = [[] for _ in range(n + 1)]
