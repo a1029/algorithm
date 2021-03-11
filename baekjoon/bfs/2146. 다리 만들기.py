@@ -37,24 +37,44 @@ for i in range(n):
             labeling(i, j, label)
             label += 1
 
+edges = []
 
-def get_edge(label):
-    edges = []
+for i in range(2, label + 1):
     for x in range(n):
         for y in range(n):
-            if data[x][y] == label:
+            if data[x][y] == i:
                 for d in range(4):
                     nx = x + dx[d]
                     ny = y + dy[d]
                     if 0 <= nx < n and 0 <= ny < n and data[nx][ny] == 0:
-                        edges.append([x, y])
-    if edges:
-        return edges
-    else:
-        return None
+                        edges.append([x, y, i])
+                        break
 
-label = 2
-for i in range(n):
-    for j in range(n):
-        edges = get_edge(label)
-        bfs(edges, label)
+
+
+def bfs():
+    result = 1e9
+    visit = [[1e9] * n for _ in range(n)]
+    q = collections.deque(edges)
+    while q:
+        x, y, label = q.popleft()
+        print(q)
+        visit[x][y] = 0
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if 0 <= nx < n and 0 <= ny < n:
+                if data[nx][ny] == 0 and visit[nx][ny] == 1e9:
+                    visit[nx][ny] = min(visit[nx][ny], visit[x][y] + 1)
+                    q.append([nx, ny, label])
+                elif data[nx][ny] != 0 and data[nx][ny] != label:
+                    result = min(result, visit[x][y] + 1)
+                    break
+        for i in range(n):
+            for j in range(n):
+                visit[i][j] = 1e9
+
+    print(result)
+
+
+bfs()
