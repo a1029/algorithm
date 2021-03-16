@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main{
+public class ladder{
 
     static int n,m,h;
     static int[][] ladder;
@@ -71,9 +71,7 @@ public class Main{
                 return;
             }
         }
-
         System.out.println("-1");
         return;
     }
-
 }
