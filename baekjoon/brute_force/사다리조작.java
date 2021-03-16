@@ -1,8 +1,10 @@
+package baekjoon.brute_force;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ladder{
+public class 사다리조작{
 
     static int n,m,h;
     static int[][] ladder;
