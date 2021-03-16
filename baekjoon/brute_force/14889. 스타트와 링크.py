@@ -1,7 +1,7 @@
 import sys
 
 def dfs(a, count):
-
+    
     global result
     if count == n//2:
         start, link = 0, 0
