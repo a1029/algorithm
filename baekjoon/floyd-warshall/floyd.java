@@ -1,10 +1,8 @@
-package baekjoon.shortest_path;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 플로이드{
+public class floyd{
 
     static final int INF = (int)1e9;
     static int n, m;
