@@ -29,37 +29,31 @@ for _ in range(test_case):
     
     q = collections.deque()
     for i in range(1, n+1):
-        if indegree[i]==0:
+        if indegree[i] == 0:
             q.append(i)
 
     flag = 0
-    if len(q)==0:
-        flag = 2
     result = []
-    while q:
-        now = q.popleft()
-        result.append(now)
-        count = 0
-        for i in range(1, n+1):
-            if graph[now][i]:
-                indegree[i] -= 1
-                if indegree[i]<=0:
-                    q.append(i)
-                    count += 1
-        if count>=2:
-            flag = 1
-            break
-        if count==0:
+    for _ in range(n):
+        if len(q) == 0:
             flag = 2
             break
+        if len(q) >= 2:
+            flag = 1
+            break
+        now = q.popleft()
+        result.append(now)
+        for j in range(1, n+1):
+            if graph[now][j]:
+                indegree[j] -= 1
+                if indegree[j] <= 0:
+                    q.append(j)
     
-    if flag==0:
+    if flag == 0:
         for a in result:
             print(a, end=' ')
-    elif flag==1:
+        print("")
+    elif flag == 1:
         print("?")
     else:
         print("IMPOSSIBLE")
-        
-
-    

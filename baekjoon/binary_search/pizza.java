@@ -1,8 +1,7 @@
-
-
 import java.util.StringTokenizer;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
+
 public class pizza{
     
     public static int d,n;
