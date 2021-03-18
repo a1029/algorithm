@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+// 15684. 사다리 조작
 public class ladder{
 
     static int n,m,h;

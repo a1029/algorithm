@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+// 11404. 플로이드
 public class floyd{
 
     static final int INF = (int)1e9;
