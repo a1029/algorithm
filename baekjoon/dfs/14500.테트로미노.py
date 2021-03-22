@@ -1,11 +1,18 @@
+n, m = map(int, input().split())
+arr = [list(map(int, input().split())) for _ in range(n)]
+check = [[0] * m for _ in range(n)]
+dx = [0, 1, 0, -1]
+dy = [1, 0, -1, 0]
+ex = [[0, 0, 0, 1], [0, 1, 2, 1], [0, 0, 0, -1], [0, -1, 0, 1]]
+ey = [[0, 1, 2, 1], [0, 0, 0, 1], [0, 1, 2, 1], [0, 1, 1, 1]]
+result = 0
 
 
-def dfs(x,y,prev,length):
+def dfs(x, y, prev, length):
     global result
     if length >= 4:
         result = max(result, prev)
         return
-
     for i in range(4):
         nx = x + dx[i]
         ny = y + dy[i]
@@ -16,8 +23,8 @@ def dfs(x,y,prev,length):
             dfs(nx, ny, prev+arr[nx][ny], length+1)
             check[nx][ny] = 0
 
-def certian_check(x, y):
 
+def rest_check(x, y):
     global result
     for i in range(4):
         prev = 0
@@ -33,20 +40,12 @@ def certian_check(x, y):
         if not flag:
             result = max(result, prev)
 
-n, m = map(int, input().split())
-arr = [list(map(int, input().split())) for _ in range(n)]
-check = [[0] * m for _ in range(n)]
-dx = [0, 1, 0, -1]
-dy = [1, 0, -1, 0]
-ex = [[0, 0, 0, 1], [0, 1, 2, 1], [0, 0, 0, -1], [0, -1, 0, 1]]
-ey = [[0, 1, 2, 1], [0, 0, 0, 1], [0, 1, 2, 1], [0, 1, 1, 1]]
-result = 0
 
 for i in range(n):
     for j in range(m):
         check[i][j] = 1
         dfs(i, j, arr[i][j], 1)
         check[i][j] = 0
-        certian_check(i, j)
+        rest_check(i, j)
 
 print(result)
