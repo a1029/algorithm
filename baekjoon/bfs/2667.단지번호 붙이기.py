@@ -1,7 +1,5 @@
 from collections import deque
 
-
-# O
 n = int(input())
 data = []
 for _ in range(n):
