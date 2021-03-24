@@ -1,7 +1,7 @@
 from typing import List
 import collections
 
-# X
+
 def solution(n, m, input: List[str]):
 
     graph = [list(line) for line in input]

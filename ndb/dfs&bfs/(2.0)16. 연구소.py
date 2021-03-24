@@ -1,11 +1,8 @@
 import itertools
 import copy
 
-
-# O
 def search(n, m, data):
     def dfs(i, j):
-
         if i < 0 or i >= len(data) or j < 0 or j >= len(data[0]) or data[i][j] == 1 or data[i][j] == 3:
             return
         data[i][j] = 3

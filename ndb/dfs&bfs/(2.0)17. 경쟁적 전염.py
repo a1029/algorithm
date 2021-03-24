@@ -1,8 +1,6 @@
 
 
-# X
 def solution(n, k, data, s, target_x, target_y):
-    
     q = []
     dx = [0, 1, 0, -1]
     dy = [1, 0, -1, 0]
@@ -11,7 +9,6 @@ def solution(n, k, data, s, target_x, target_y):
         for j in range(n):
             if data[i][j] != 0:
                 q.append((data[i][j], 0, i, j))
-
     q.sort()
 
     while q:
@@ -24,7 +21,6 @@ def solution(n, k, data, s, target_x, target_y):
             if 0 <= nx < n and 0 <= ny < n and data[nx][ny] == 0:
                 data[nx][ny] = virus
                 q.append((virus, time + 1, nx, ny))
-
     print(data[target_x-1][target_y-1])
 
 

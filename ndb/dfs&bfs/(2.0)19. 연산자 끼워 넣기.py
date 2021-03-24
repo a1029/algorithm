@@ -1,7 +1,6 @@
 import itertools
 
 
-# O
 def cal(array):
     result = array[0]
     for i in range(1, len(array) - 1):

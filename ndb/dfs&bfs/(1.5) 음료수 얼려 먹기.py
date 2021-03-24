@@ -1,7 +1,6 @@
 from typing import List
 
 
-# O
 def my_answer(input: List[str]):
 
     def dfs(i, j):

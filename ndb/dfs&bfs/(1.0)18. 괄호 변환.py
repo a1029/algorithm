@@ -1,5 +1,5 @@
 
-# X
+#
 def separate(w):
     index = 0
     for i in range(len(w)):
