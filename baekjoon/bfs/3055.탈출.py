@@ -1,53 +1,48 @@
 from collections import deque
-import sys
-input = sys.stdin.readline
-dx = [1, -1, 0, 0]
-dy = [0, 0, -1, 1]
 r, c = map(int, input().split())
-s = []
-w = deque()
-q = deque()
-visit = [[0] * c for i in range(r)]
-def bfs():
-    while q or w:
-        temp1 = []
-        temp2 = []
-        while q:
-            a, b = q.popleft()
-            if s[a][b] != "*":
-                for i in range(4):
-                    x = a + dx[i]
-                    y = b + dy[i]
-                    if 0 <= x < r and 0 <= y < c and visit[x][y] == 0 and s[x][y] != "X" and s[x][y] != "*":
-                        s[x][y] = s[a][b] + 1
-                        visit[x][y] = 1
-                        temp1.append([x, y])
-        while w:
-            a, b = w.popleft()
-            for i in range(4):
-                x = a + dx[i]
-                y = b + dy[i]
-                if x == d[0] and y == d[1]:
-                    continue
-                if 0 <= x < r and 0 <= y < c and s[x][y] != "*" and s[x][y] != "X":
-                    s[x][y] = "*"
-                    temp2.append([x, y])
-        for i in temp1:
-            q.append(i)
-        for i in temp2:
-            w.append(i)
+arr = [list(input()) for _ in range(r)]
+dist = [[-1]*c for _ in range(r)]
+w, q = deque(), deque()
+a,b=0,0
+count = 0
 for i in range(r):
-    a = list(input().strip())
-    s.append(a)
     for j in range(c):
-        if a[j] == "D":
-            d = [i, j]
-        elif a[j] == "S":
-            q.append([i, j])
-            visit[i][j] = 1
-            s[i][j] = 0
-        elif a[j] == "*":
-            w.append([i, j])
-bfs()
-result = s[d[0]][d[1]]
-print(result if result != "D" else "KAKTUS")
+        if arr[i][j]=='S':
+            q.append([i,j])
+            arr[i][j]='.'
+            dist[i][j] = 0
+        if arr[i][j]=='*':
+            w.append([i,j])
+        if arr[i][j]=='D':
+            a,b=i,j
+dx = [1, -1, 0, 0]
+dy = [0, 0, 1, -1]
+def flood():
+    for _ in range(len(w)):
+        x, y = w.popleft()
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if 0 <= nx < r and 0 <= ny < c and arr[nx][ny] == '.':
+                arr[nx][ny] = '*'
+                w.append([nx, ny])
+def move():
+    for _ in range(len(q)):
+        x,y = q.popleft()
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if 0 <= nx < r and 0 <= ny < c:
+                if (arr[nx][ny] == '.' or arr[nx][ny] == 'D') and dist[nx][ny] == -1:
+                    dist[nx][ny] = dist[x][y] + 1
+                    q.append([nx, ny])
+while True:
+    flood()
+    move()
+    count+=1
+    if dist[a][b]!=-1:
+        print(dist[a][b])
+        break
+    if count>=r*c:
+        print("KAKTUS")
+        break
