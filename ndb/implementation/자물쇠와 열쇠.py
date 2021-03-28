@@ -1,19 +1,14 @@
 from typing import List
 
-
-# X
-# 2차원 리스트 90도 시계방향 회전
 def rotate(key: List[List[int]]):
     col = len(key)
     row = len(key[0])
     result = [[0] * col for _ in range(row)]
     for i in range(col):
         for j in range(row):
-            result[j][col - i - 1] = key[i][j]
+            result[j][col-1-i] = key[i][j]
     return result
 
-
-# 새로운 자물쇠 중앙이 모두 1인지 확인
 def check(new_lock: List[List[int]]):
     lock_length = len(new_lock) // 3
     for i in range(lock_length, lock_length*2):
@@ -21,7 +16,6 @@ def check(new_lock: List[List[int]]):
             if new_lock[i][j] != 1:
                 return False
     return True
-
 
 def solution(key, lock):
     n = len(lock)
