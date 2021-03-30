@@ -35,5 +35,3 @@ def solution(key, lock):
                     for d in range(m):
                         new_lock[a+c][b+d] -= key[c][d]
     return False
-
-print(solution([[0, 0, 0], [1, 0, 0], [0, 1, 1]], [[1, 1, 1], [1, 1, 0], [1, 0, 1]]))
