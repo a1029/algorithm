@@ -13,11 +13,7 @@ def solution(lines):
         c = round(float(b + 1 - 0.001), 3)
         count = 0
         for start,end in lines:
-            if b<=end<=c:
-                count+=1
-            elif b<=start<=c:
-                count+=1
-            elif start<=b and c<=end:
+            if b<=end<=c or b<=start<=c or (start<=b and c<=end):
                 count+=1
         result.append(count)
     answer = max(result)
