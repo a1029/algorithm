@@ -1,12 +1,10 @@
 
 def solution(relation):
 
-    n = len(relation)
-    m = len(relation[0])
+    n,m = len(relation), len(relation[0])
     attr = [x for x in range(m)]
-    superkey = []
     subset = []
-    answer = []
+    superkey = []
     for i in range(1<<m):
         tmp = []
         for j in range(m):
@@ -37,9 +35,10 @@ def solution(relation):
 
     superkey.sort(key=lambda x: len(x))
     remove_list = []
+    answer = []
     for i in range(len(superkey)):
         for j in range(i+1, len(superkey)):
-            if len(set(superkey[i])-set(superkey[j]))==0:
+            if set(superkey[i]) & set(superkey[j]) == set(superkey[i]):
                 remove_list.append(superkey[j])
     for key in superkey:
         if key not in remove_list:
