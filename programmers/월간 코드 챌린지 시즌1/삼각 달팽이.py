@@ -1,4 +1,3 @@
-
 def solution(n):
     max_value = sum(x for x in range(n+1))
     arr = [[0]*n for _ in range(n)]
