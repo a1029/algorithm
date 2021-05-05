@@ -42,7 +42,7 @@ def solution(n, path, order):
         tree[b].append(a)
 
     visit = [False]*n
-    recur = [False]*n
+    recur = [False]*n   # 경로 압축 변수 (시간 단축용)
     for node in range(n):
         if is_cycle(node, visit, recur):
             return False
