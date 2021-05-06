@@ -1,12 +1,12 @@
-import re
 
 def solution(s):
 
-    p = re.findall('{(.*?)}', s[1:])
+    s = s[2:-2].split("},{")
     tmp = []
-    for a in p:
-        tmp.append(list(map(int, a.split(','))))
+    for c in s:
+        tmp.append(list(map(int, c.split(','))))
     tmp.sort(key=len)
+
     answer = []
     for nums in tmp:
         for num in nums:

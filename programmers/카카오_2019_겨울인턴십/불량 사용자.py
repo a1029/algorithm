@@ -1,10 +1,10 @@
 import itertools
 
-def check(a,b):
-    if len(a)!=len(b):
+def check(s1, s2):
+    if len(s1)!=(len(s2)):
         return False
-    for i in range(len(a)):
-        if b[i]!='*' and a[i]!=b[i]:
+    for i in range(len(s1)):
+        if s1[i]!=s2[i] and s2[i]!='*':
             return False
     return True
 
@@ -16,7 +16,7 @@ def solution(user_id, banned_id):
             count = 0
             for i in range(len(case)):
                 if check(case[i],perm[i]):
-                    count+=1
-            if count==len(case):
-                answer.add(case)
+                    count += 1
+            if count==len(banned_id):
+                    answer.add(case)
     return len(answer)
