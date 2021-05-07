@@ -3,12 +3,12 @@ import re
 
 def solution(expression):
 
-    arr = re.split('(\D)', expression)
-    oper = set(re.findall('\D', expression))
+    ops = set(re.findall('\D', expression))
+    expr = re.split('(\D)', expression)
 
     answer = 0
-    for case in itertools.permutations(oper):
-        tmp = arr[:]
+    for case in itertools.permutations(ops):
+        tmp = expr[:]
         for op in case:
             while op in tmp:
                 i = tmp.index(op)
