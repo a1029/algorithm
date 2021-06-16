@@ -11,7 +11,7 @@ def solution(word, pages):
         tmp['links'] = links
         tmp['out'] = len(links)
 
-        tmp['basic'] = re.sub("[^a-z]", ".", page.lower()).split('.').count(word.lower())
+        tmp['basic'] = re.sub("[^a-z]", "", page.lower()).split('.').count(word.lower())
         tmp['matching'] = tmp['basic']
         pageinfo.append(tmp)
 

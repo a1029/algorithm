@@ -4,7 +4,7 @@ def solution(new_id:str):
 
     new_id = new_id.lower()
     new_id = re.sub('[^a-z0-9._-]','',new_id)
-    new_id = re.sub('[.]{2,}','.',new_id)
+    new_id = re.sub('[.]{2,}', '', new_id)
     if new_id and new_id[0]=='.':
         new_id = new_id[1:]
     if new_id and new_id[-1]=='.':
