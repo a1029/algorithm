@@ -17,10 +17,10 @@ public class 빗물 {
         int h = Integer.parseInt(st.nextToken());
         int w = Integer.parseInt(st.nextToken());
 
-        int[] height = new int[w];
+        ArrayList<Integer> height = new ArrayList<>();
         st = new StringTokenizer(br.readLine());
         for(int i=0; i<w; i++){
-            height[i] = Integer.parseInt(st.nextToken());
+            height.add(Integer.parseInt(st.nextToken()));
         }
 
         /*if (height.isEmpty()){
@@ -46,11 +46,12 @@ public class 빗물 {
         }
         System.out.println(result);
         */
+
         Stack<Integer> stack = new Stack<>();
 
         int result = 0;
-        for(int i=0; i<height.length; i++){
-            while(!stack.empty() && height[i] > height[stack.peek()]){
+        for(int i=0; i<height.size(); i++){
+            while(!stack.empty() && height.get(i) > height.get(stack.peek())){
                 int top = stack.pop();
 
                 if (stack.empty()){
@@ -58,7 +59,7 @@ public class 빗물 {
                 }
 
                 int dist = i - stack.peek() - 1;
-                int differ = Math.min(height[i], height[stack.peek()]) - height[top];
+                int differ = Math.min(height.get(i), height.get(stack.peek())) - height.get(top);
 
                 result += dist * differ;
             }

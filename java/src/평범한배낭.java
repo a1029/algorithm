@@ -2,8 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// 12865. 평범한 배낭
-public class Main {
+public class 평범한배낭 {
     
 
     static int n, k;

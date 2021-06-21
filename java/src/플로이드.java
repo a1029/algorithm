@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 // 11404. 플로이드
-public class floyd{
+public class 플로이드 {
 
     static final int INF = (int)1e9;
     static int n, m;
