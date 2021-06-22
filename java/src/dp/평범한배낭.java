@@ -1,7 +1,10 @@
+package dp;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+// 12865
 public class 평범한배낭 {
     
 
