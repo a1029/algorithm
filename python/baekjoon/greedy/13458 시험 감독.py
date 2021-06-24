@@ -1,4 +1,5 @@
 import sys
+
 n = int(input())
 candidates = list(map(int, sys.stdin.readline().rstrip().split()))
 b, c = map(int, input().split())
