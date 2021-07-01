@@ -9,7 +9,7 @@ public class 숨바꼭질3 {
 
     static int n,k;
     static int time = Integer.MAX_VALUE;
-    static Queue<Node3> queue = new LinkedList<>();
+    static Queue<Node> queue = new LinkedList<>();
     static boolean[] visit = new boolean[100001];
     public static void main(String[] args) throws IOException {
 
@@ -30,9 +30,9 @@ public class 숨바꼭질3 {
 
     public static void bfs(){
 
-        queue.add(new Node3(n,0));
+        queue.add(new Node(n,0));
         while(!queue.isEmpty()){
-            Node3 node = queue.poll();
+            Node node = queue.poll();
             visit[node.pos] = true;
             if (node.pos==k){
                 time = Math.min(time, node.time);
@@ -42,13 +42,13 @@ public class 숨바꼭질3 {
                 int nv3 = node.pos*2;
 
                 if (nv1>=0 && !visit[nv1]){
-                    queue.add(new Node3(nv1, node.time+1));
+                    queue.add(new Node(nv1, node.time+1));
                 }
                 if (nv2 <= 100000 && !visit[nv2]){
-                    queue.add(new Node3(nv2, node.time+1));
+                    queue.add(new Node(nv2, node.time+1));
                 }
                 if (nv3 <= 100000 && !visit[nv3]){
-                    queue.add(new Node3(nv3, node.time));
+                    queue.add(new Node(nv3, node.time));
                 }
             }
         }

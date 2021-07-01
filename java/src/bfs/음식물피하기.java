@@ -37,21 +37,21 @@ public class 음식물피하기 {
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
                 if (!visit[i][j] && map[i][j]==1){
-                    bfs(new Node(i,j));
+                    bfs(new Point(i,j));
                 }
             }
         }
         System.out.println(result);
     }
 
-    public static void bfs(Node node){
+    public static void bfs(Point node){
 
         int count = 1;
-        Queue<Node> q = new LinkedList<>();
+        Queue<Point> q = new LinkedList<>();
         q.add(node);
         visit[node.x][node.y] = true;
         while(!q.isEmpty()){
-            Node now = q.poll();
+            Point now = q.poll();
             int x = now.x;
             int y = now.y;
             for(int i=0; i<4; i++){
@@ -60,7 +60,7 @@ public class 음식물피하기 {
                 if(0<=nx && nx < n && 0<=ny && ny < m && !visit[nx][ny] && map[nx][ny]==1){
                     visit[nx][ny] = true;
                     count += 1;
-                    q.add(new Node(nx,ny));
+                    q.add(new Point(nx,ny));
                 }
             }
         }
@@ -68,12 +68,12 @@ public class 음식물피하기 {
     }
 }
 
-class Node{
+class Point{
 
     public int x;
     public int y;
 
-    public Node(int x, int y){
+    public Point(int x, int y){
         this.x = x;
         this.y = y;
     }
