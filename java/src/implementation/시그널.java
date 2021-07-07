@@ -3,7 +3,6 @@ package implementation;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.stream.IntStream;
 
 public class 시그널 {
 
@@ -29,60 +28,51 @@ public class 시그널 {
 
         int j=0;
         while (j<n/5){
+            if (map[0][j]=='.'){
+                j+=1;
+                continue;
+            }
             int count = 0;
-            for (int i=0; i<5; i++){
-               if(map[i][j+1]=='.'){
-                   count+=1;
-               }
+            if (j==n/5-1){
+                count = 5;
+            } else {
+                for (int i=0; i<5; i++){
+                    if(map[i][j+1]=='.'){
+                        count+=1;
+                    }
+                }
             }
             if (count==5){
                 result.append("1");
-                j+=2;
+                j += 1;
             } else {
-                int num = checkNum(j);
-                result.append(num);
-                j+=4;
+                result.append(checkNum(j));
+                j += 3;
             }
         }
         System.out.println(result);
     }
 
-    static int checkNum(int index){
+    static int checkNum(int idx){
 
-        int count = 0;
-        for(int j=index; j<index+3; j++){
-            if(map[0][j]=='#'){
-                count+=1;
-            }
-            if(map[4][j]=='#'){
-                count+=1;
-            }
-        }
-        // 0,2,3,5,6,8,9
-        if (count==6){
-            if (map[1][index+1]=='.' && map[2][index+1]=='.' && map[1][index+1]=='.') {
-                return 0;
-            } else if(map[1][index]=='.' && map[3][index+2]=='.'){
-                return 2;
-            } else if(map[1][index]=='.' && map[3][index]=='.'){
-                return 3;
-            } else if(map[1][index+2]=='.' && map[3][index]=='.'){
-                return 5;
-            } else if(map[1][index+2]=='.' && map[3][index]=='#'){
-                return 6;
-            } else if(map[1][index+1]=='.' && map[2][index+1]=='#' && map[3][index+1]=='.'){
-                return 8;
-            } else{
-                return 9;
-            }
-        // 4, 7
+        if (map[1][idx+1]=='.' && map[2][idx+1]=='.' && map[3][idx+1]=='.' && map[4][idx+1]=='#'){
+            return 0;
+        } else if (map[1][idx]=='.' && map[3][idx+2]=='.'){
+            return 2;
+        } else if (map[1][idx]=='.' && map[2][idx]=='#' && map[3][idx]=='.'){
+            return 3;
+        } else if (map[0][idx]=='#' && map[0][idx+1]=='.'){
+            return 4;
+        } else if (map[1][idx+2]=='.' && map[3][idx]=='.'){
+            return 5;
+        } else if (map[1][idx+2]=='.' && map[3][idx]=='#'){
+            return 6;
+        } else if (map[2][idx]=='.'){
+            return 7;
+        } else if (map[3][idx]=='#'){
+            return 8;
         } else {
-            if (map[2][index+1]=='#'){
-                return 4;
-            } else {
-                return 7;
-            }
+            return 9;
         }
     }
-
 }
