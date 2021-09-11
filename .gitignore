@@ -1,9 +1,9 @@
 
 # python
 .idea/
+venv/
 
 # java
 out/
-
 
 *.sh
