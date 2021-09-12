@@ -1,4 +1,4 @@
-package implementation;
+package 카카오_2021_채용연계형_인턴쉽;
 
 public class 숫자문자열과영단어 {
 
