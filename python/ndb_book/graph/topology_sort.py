@@ -2,12 +2,12 @@ import collections
 from typing import List
 
 
-def topology_sort(v, e, array: List[List[int]]):
+def topology_sort(v, e, String: List[List[int]]):
 
     # 모든 노드의 진입차수를 0으로 초기화
     indegree = [0] * (v + 1)
     graph = [[] for _ in range(v + 1)]
-    for a, b in array:
+    for a, b in String:
         graph[a].append(b)
         indegree[b] += 1
 

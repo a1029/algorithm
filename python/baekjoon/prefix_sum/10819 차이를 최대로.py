@@ -13,7 +13,7 @@ for case in itertools.permutations(data):
 
 print(result)
 
-array = [0]*n
+String = [0]*n
 visited = [False]*n
 result = 0
 def dfs(index):
@@ -23,7 +23,7 @@ def dfs(index):
     if index == n:
         tmp = 0
         for i in range(n-1):
-            tmp += abs(array[i]-array[i+1])
+            tmp += abs(String[i]-String[i+1])
         result = max(result, tmp)
         return
 
@@ -32,7 +32,7 @@ def dfs(index):
             if visited[i]:
                 continue
             visited[i] = True
-            array[index] = data[i]
+            String[index] = data[i]
             dfs(index+1)
             visited[i] = False
 
