@@ -13,23 +13,24 @@ public class 방번호 {
         int[] count = new int[10];
         Arrays.fill(count, 0);
 
-        int answer = 0;
         for(int i=0; i<N.length; i++){
             int index = Integer.parseInt(N[i]);
-            count[index] += 1;
-        }
-        int result = Integer.MIN_VALUE;
-        int index = 0;
-        for(int i=0; i<10; i++){
-            if (result <= count[i]){
-                result = count[i];
-                index = i;
+            if(index==6 || index==9){
+                count[6] += 1;
+            } else {
+                count[index] += 1;
             }
         }
-        if(index==6 || index==9){
-            System.out.println((int)Math.ceil(count[index]/(double)2));
-        } else {
-            System.out.println(count[index]);
+        int ans1 = Integer.MIN_VALUE;
+        int ans2 = Integer.MIN_VALUE;
+        for(int i=0; i<10; i++){
+            if(i==6){
+                ans1 = Math.max(ans1, count[i]);
+            } else {
+                ans2 = Math.max(ans2, count[i]);
+            }
         }
+        ans1 = (int)Math.ceil(ans1/(double)2);
+        System.out.println(Math.max(ans1, ans2));
     }
 }
