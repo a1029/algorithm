@@ -7,5 +7,3 @@ venv/
 out/
 
 *.sh
-
-.gitignore

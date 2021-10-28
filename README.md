@@ -1,10 +1,11 @@
-알고리즘 공부방
----------------------------
+## 알고리즘 문제 풀이 모음집
 
 ### 언어
-Python, Java
+
+Java, Python
 
 ### 참조
+
 백준 https://www.acmicpc.net/
 
 프로그래머스 https://programmers.co.kr/
