@@ -5,5 +5,7 @@ venv/
 
 # java
 out/
+.vscode/
 
 *.sh
+
