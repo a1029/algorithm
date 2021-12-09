@@ -7,12 +7,11 @@ def solution(a, b, g, s, w, t):
         gold = 0
         silver = 0
         total = 0
+        
         for i in range(len(w)):
-
             move_cnt = mid // (t[i] * 2)
             if mid % (t[i] * 2) >= t[i]:
                 move_cnt += 1
-
             gold += g[i] if g[i] < move_cnt * w[i] else move_cnt * w[i]
             silver += s[i] if s[i] < move_cnt * w[i] else move_cnt * w[i]
             total += g[i] + s[i] if g[i] + s[i] < move_cnt * w[i] else move_cnt * w[i]
