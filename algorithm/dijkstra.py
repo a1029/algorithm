@@ -2,8 +2,7 @@ from typing import List
 import heapq
 import collections
 
-
-def dijkstra_algorithm(n, m, times: List[List[int]]):
+def dijkstra(n, m, times: List[List[int]]):
 
     graph = collections.defaultdict(list)
     for u, v, w in times:
@@ -40,14 +39,4 @@ def dijkstra_algorithm(n, m, times: List[List[int]]):
             print(distance[i], end=' ')
 
 
-dijkstra_algorithm(6, 11, [[1, 2, 2],
-                           [1, 3, 5],
-                             [1, 4, 1],
-                             [2, 3, 3],
-                             [2, 4, 2],
-                             [3, 2, 3],
-                             [3, 6, 5],
-                             [4, 3, 3],
-                             [4, 5, 1],
-                             [5, 3, 1],
-                             [5, 6, 2]])
+dijkstra(6, 11, [[1, 2, 2],[1, 3, 5],[1, 4, 1],[2, 3, 3],[2, 4, 2],[3, 2, 3],[3, 6, 5],[4, 3, 3],[4, 5, 1],[5, 3, 1],[5, 6, 2]])

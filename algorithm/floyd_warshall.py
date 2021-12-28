@@ -1,7 +1,7 @@
 from typing import List
 
 
-def floyd_warshall_algorithm(n, m, times: List[List[int]]):
+def floyd_warshall(n, m, times: List[List[int]]):
 
     inf = int(1e9)
     graph = [[inf] * (n + 1) for _ in range(n + 1)]
@@ -29,10 +29,4 @@ def floyd_warshall_algorithm(n, m, times: List[List[int]]):
         print()
 
 
-floyd_warshall_algorithm(4, 7, [[1, 2, 4],
-                                  [1, 4, 6],
-                                  [2, 1, 3],
-                                  [2, 3, 7],
-                                  [3, 1, 5],
-                                  [3, 4, 4],
-                                  [4, 3, 2]])
+floyd_warshall(4, 7, [[1, 2, 4],[1, 4, 6],[2, 1, 3],[2, 3, 7],[3, 1, 5],[3, 4, 4],[4, 3, 2]])

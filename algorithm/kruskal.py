@@ -20,7 +20,7 @@ def union_parent(parent, a, b):
         parent[a] = b
 
 
-def kruskal_algorithm(v, e, edges: List[List[int]]):
+def kruskal(v, e, edges: List[List[int]]):
     parent = [0] * (v + 1)
     result = 0
 
@@ -41,12 +41,4 @@ def kruskal_algorithm(v, e, edges: List[List[int]]):
     print(result)
 
 
-kruskal_algorithm(7, 9, [[1, 2, 29],
-                         [1, 5, 75],
-                         [2, 3, 35],
-                         [2, 6, 34],
-                         [3, 4, 7],
-                         [4, 6, 23],
-                         [4, 7, 13],
-                         [5, 6, 53],
-                         [6, 7, 25]])
+kruskal(7, 9, [[1, 2, 29],[1, 5, 75],[2, 3, 35],[2, 6, 34],[3, 4, 7],[4, 6, 23],[4, 7, 13],[5, 6, 53],[6, 7, 25]])

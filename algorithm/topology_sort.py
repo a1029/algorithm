@@ -35,11 +35,4 @@ def topology_sort(v, e, String: List[List[int]]):
     print(result)
 
 
-topology_sort(7, 8, [[1, 2],
-                     [1, 5],
-                     [2, 3],
-                     [2, 6],
-                     [3, 4],
-                     [4, 7],
-                     [5, 6],
-                     [6, 4]])
+topology_sort(7, 8, [[1, 2],[1, 5],[2, 3],[2, 6],[3, 4],[4, 7],[5, 6],[6, 4]])
