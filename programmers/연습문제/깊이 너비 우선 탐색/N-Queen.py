@@ -1,20 +1,21 @@
-def dfs(arr, x, n):
-    if x==n:
+def dfs(arr, row, n):
+    if row==n:
         return 1
+    
     count = 0
-
-    for y in range(n):
-        arr[x] = y
-        for i in range(x):
-            if arr[x] == arr[i] or abs(arr[x] - arr[i]) == x - i:
+    for j in range(n):
+        arr[row] = j
+        for i in range(row):
+            if arr[row] == arr[i] or abs(arr[row] - arr[i]) == row - i:
                 break
         else:
-            count += dfs(arr, x+1, n)
+            count += dfs(arr, row+1, n)
     return count
-
+            
 def solution(n):
+    answer = 0
     arr = [0]*n
     answer = dfs(arr, 0, n)
     return answer
 
-print(solution(12))
+print(solution(4))
